@@ -25,11 +25,11 @@ public class UserRegistration {
     	Pattern pattern=Pattern.compile("^[0-9]{2}+[\\s][0-9]{10}$"); //delcaration of pattern
 		   return pattern.matcher(Mobilenumber).matches();
     }
-    //validate password with numeric number
+    //validate password with one Special Character
 		   
-		   public boolean atleastonenumericnumberpassword (String atleastonenumericnumberpassword) {
+		   public boolean atleastone_special_characterpassword (String atleastone_special_characterpassword) {
 		    	Pattern pattern=Pattern.compile("^(?=.[A-Za-z0-9])(?=.*[0-9])(?=.*[A-Z]).{8,}$"); //delcaration of pattern
-				   return pattern.matcher(atleastonenumericnumberpassword).matches();
+				   return pattern.matcher(atleastone_special_characterpassword).matches();
 		
 }
 }

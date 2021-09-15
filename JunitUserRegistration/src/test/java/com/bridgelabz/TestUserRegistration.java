@@ -47,18 +47,18 @@ public class TestUserRegistration {
 				boolean result = registration.Mobilenumber("91 9493750386");
 				Assert.assertTrue(result);
 			}
-			//Test password without numeric number if it false
+			//Test password without special character if it false
 				@Test
 				public void if_password_is_without_numbericnumber_should_returnfalse() {
 					UserRegistration registration = new UserRegistration();
-					boolean result = registration.atleastonenumericnumberpassword("balacha");
+					boolean result = registration.atleastone_special_characterpassword("balachandar");
 					Assert.assertFalse(result);
 				}
-		//	validate password with numeric number
+		//	Tesr password with one special character
 				@Test
 				public void if_password_is_with_numericnumber_should_returnTrue() {
 					UserRegistration registration = new UserRegistration();
-					boolean result = registration.atleastonenumericnumberpassword("Bala12345");
+					boolean result = registration.atleastone_special_characterpassword("Bala@1234");
 					Assert.assertTrue(result);
 }
 }
