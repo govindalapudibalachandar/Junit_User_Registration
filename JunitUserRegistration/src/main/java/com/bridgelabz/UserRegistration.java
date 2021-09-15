@@ -10,4 +10,9 @@ public class UserRegistration {
 		   Pattern pattern=Pattern.compile("[A-Z][a-z]{3,}"); //delcaration of pattern
 		   return pattern.matcher(firstname).matches();
     }
+
+    public boolean Lastname(String Lastname) {
+    	Pattern pattern=Pattern.compile("[A-Z][a-z]{3,}"); //delcaration of pattern
+		   return pattern.matcher(Lastname).matches();
+    }
 }
