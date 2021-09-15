@@ -22,7 +22,6 @@ public class TestUserRegistration {
 		boolean  result = registration.Lastname("Balachandar");
 		Assert.assertEquals(true,result );
 }
-
 	@Test
 	public  void  If_Email_Id_Isnotproper_should_returnfalse() {
 		UserRegistration registration = new UserRegistration();
@@ -33,6 +32,19 @@ public class TestUserRegistration {
 	public  void If_Email_Id_Should_returnTrue() {
 		UserRegistration registration = new UserRegistration();
 		boolean  result = registration.Email_Id("Bala123@gmail.com");
-		Assert.assertTrue(result );
+		Assert.assertEquals(true,result );
+		}
+		//test for if mobile is false
+		@Test
+		public void if_mobilenumber_is_lessthan_10digits_should_returnfalse() {
+			boolean result = registration.Mobilenumber("912234");
+			Assert.assertFalse(result);
+		}
+		//test for if mobilenumber is true
+			@Test
+			public void if_mobilenumber_isproper_should_returnTrue() {
+				UserRegistration registration = new UserRegistration();
+				boolean result = registration.Mobilenumber("91 9493750386");
+				Assert.assertTrue(result);
 }
 }

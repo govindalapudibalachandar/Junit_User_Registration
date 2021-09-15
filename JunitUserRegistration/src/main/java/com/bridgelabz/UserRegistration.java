@@ -20,4 +20,9 @@ public class UserRegistration {
     	Pattern pattern=Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{3,})$"); //delcaration of pattern
 		   return pattern.matcher(Email_Id).matches();
     }
+    //validate Mobile number 
+    public boolean Mobilenumber(String Mobilenumber) {
+    	Pattern pattern=Pattern.compile("^[0-9]{2}+[\\s][0-9]{10}$"); //delcaration of pattern
+		   return pattern.matcher(Mobilenumber).matches();
+}
 }
