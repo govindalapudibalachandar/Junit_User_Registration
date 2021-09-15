@@ -46,5 +46,17 @@ public class TestUserRegistration {
 				UserRegistration registration = new UserRegistration();
 				boolean result = registration.Mobilenumber("91 9493750386");
 				Assert.assertTrue(result);
+			}
+				@Test
+				public void if_password_is_lessthan8characters_should_returnfalse() {
+					UserRegistration registration = new UserRegistration();
+					boolean result = registration.password("toshort");
+					Assert.assertFalse(result);
+				}
+				@Test
+				public void if_password_is_proper_should_returnTrue() {
+					UserRegistration registration = new UserRegistration();
+					boolean result = registration.password("tooshort");
+					Assert.assertTrue(result);
 }
 }

@@ -24,5 +24,11 @@ public class UserRegistration {
     public boolean Mobilenumber(String Mobilenumber) {
     	Pattern pattern=Pattern.compile("^[0-9]{2}+[\\s][0-9]{10}$"); //delcaration of pattern
 		   return pattern.matcher(Mobilenumber).matches();
+    }
+    //validate password
+		   
+		   public boolean password(String password) {
+		    	Pattern pattern=Pattern.compile("^[A-Za-z0-9]{8,20}$"); //delcaration of pattern
+				   return pattern.matcher(password).matches();
 }
 }
