@@ -25,10 +25,11 @@ public class UserRegistration {
     	Pattern pattern=Pattern.compile("^[0-9]{2}+[\\s][0-9]{10}$"); //delcaration of pattern
 		   return pattern.matcher(Mobilenumber).matches();
     }
-    //validate password
+    //validate password with uppercase
 		   
-		   public boolean password(String password) {
-		    	Pattern pattern=Pattern.compile("^[A-Za-z0-9]{8,20}$"); //delcaration of pattern
-				   return pattern.matcher(password).matches();
+		   public boolean atleastoneuppercasepassword (String atleastoneuppercasepassword) {
+		    	Pattern pattern=Pattern.compile("^(?=.*[a-z])(?=.*[A-Z]).{8,}$"); //delcaration of pattern
+				   return pattern.matcher(atleastoneuppercasepassword).matches();
+		
 }
 }

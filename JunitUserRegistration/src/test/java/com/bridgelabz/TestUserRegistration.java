@@ -48,15 +48,15 @@ public class TestUserRegistration {
 				Assert.assertTrue(result);
 			}
 				@Test
-				public void if_password_is_lessthan8characters_should_returnfalse() {
+				public void if_password_is_nouppercase_should_returnfalse() {
 					UserRegistration registration = new UserRegistration();
-					boolean result = registration.password("toshort");
+					boolean result = registration.atleastoneuppercasepassword("toshort");
 					Assert.assertFalse(result);
 				}
 				@Test
 				public void if_password_is_proper_should_returnTrue() {
 					UserRegistration registration = new UserRegistration();
-					boolean result = registration.password("tooshort");
+					boolean result = registration.atleastoneuppercasepassword("Tooshort");
 					Assert.assertTrue(result);
 }
 }
