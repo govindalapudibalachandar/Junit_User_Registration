@@ -47,16 +47,18 @@ public class TestUserRegistration {
 				boolean result = registration.Mobilenumber("91 9493750386");
 				Assert.assertTrue(result);
 			}
+			//Test password without numeric number if it false
 				@Test
-				public void if_password_is_nouppercase_should_returnfalse() {
+				public void if_password_is_without_numbericnumber_should_returnfalse() {
 					UserRegistration registration = new UserRegistration();
-					boolean result = registration.atleastoneuppercasepassword("toshort");
+					boolean result = registration.atleastonenumericnumberpassword("balacha");
 					Assert.assertFalse(result);
 				}
+		//	validate password with numeric number
 				@Test
-				public void if_password_is_proper_should_returnTrue() {
+				public void if_password_is_with_numericnumber_should_returnTrue() {
 					UserRegistration registration = new UserRegistration();
-					boolean result = registration.atleastoneuppercasepassword("Tooshort");
+					boolean result = registration.atleastonenumericnumberpassword("Bala12345");
 					Assert.assertTrue(result);
 }
 }
