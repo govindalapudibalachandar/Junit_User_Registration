@@ -30,6 +30,12 @@ public class UserRegistration {
 		   public boolean atleastone_special_characterpassword (String atleastone_special_characterpassword) {
 		    	Pattern pattern=Pattern.compile("^(?=.[A-Za-z0-9])(?=.*[0-9])(?=.*[A-Z]).{8,}$"); //delcaration of pattern
 				   return pattern.matcher(atleastone_special_characterpassword).matches();
+}
 		
+		   //validate for happy  case
+	//	   public boolean user_enter(String user_enter) {
+			   
+		//	Pattern pattern = Pattern.compile("[A-Z][a-z]{3,}",);
+			//   return pattern.matcher(happy_firstname).matches();
 }
-}
+		   
